@@ -1,0 +1,25 @@
+===========================================
+PRODUCT IMAGES SETUP INSTRUCTIONS
+===========================================
+
+To add your product photos:
+
+1. Save your Spermaid+ product photo (the white box with blue text) as:
+   → spermaid-product.jpg
+   
+2. Save your Fertil Max product photo (the white box with blue/pink design) as:
+   → fertilmax-product.jpg
+
+3. Place both files in this folder:
+   → public/images/
+
+IMPORTANT NOTES:
+- File names must be exactly as shown above (case-sensitive)
+- Supported formats: .jpg, .jpeg, .png, .webp
+- Recommended size: 600x600 pixels or larger
+- The images will automatically appear on the website once saved in this folder
+
+After saving the images, refresh your browser at http://localhost:3000
+
+===========================================
+
