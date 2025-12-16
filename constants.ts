@@ -10,19 +10,17 @@ export const PRODUCTS: Product[] = [
     details: 'Spermaid+ is a comprehensive dietary supplement designed to support male reproductive health. Formulated with scientifically-proven ingredients, it helps improve sperm count, motility, viscosity, and morphology. This advanced formula also boosts male libido and provides essential energy support. Each serving contains a powerful blend of vitamins, minerals, and herbal extracts specifically chosen for their role in male fertility and vitality.',
     ingredients: [
       'Vitamin E (120 mg - 800% DV)',
-      'Folic Acid (800 mcg - 200% DV)',
+      'Folic Acid (800 mcg)',
       'Zinc (40 mg - 364% DV)',
       'Selenium (60 mcg - 109% DV)',
       'Withania Somnifera Root Extract (675 mg)',
       'N-Acetyl-Cysteine (600 mg)',
       'L-Carnitine (440 mg)',
       'L-Arginine (250 mg)',
-      'Shilajit Satava (100 mg)',
+      'Shilajit Satava (500 mg)',
       'Glutathione (80 mg)',
-      'Kapikachhu (Mucuna pruriens)',
-      'Safed Musli Extract',
-      'Yava Extract',
-      'And other natural ingredients'
+      'Kapikachhu (Mucuna pruriens) (400 mg)',
+      'Safed Musli Extract (350 mg)'
     ],
   },
   {
@@ -31,6 +29,10 @@ export const PRODUCTS: Product[] = [
     tagline: 'Complete Female Fertility & PCOS Support',
     price: 54.99,
     imageUrl: '/images/fertilmax-product.webp',
+    imageUrls: [
+      '/images/fertilmax-product.webp',
+      '/images/fertilmax-product-2.webp',
+    ],
     details: 'Fertil Max by Jenasol is a complete formula designed to support female fertility and reproduction. This expertly formulated supplement helps manage and treat the symptoms of PCOS (Polycystic Ovary Syndrome). Each sachet contains a powerful combination of myo-inositol, D-chiro-inositol, and other essential nutrients that work synergistically to support hormonal balance, egg quality, and overall reproductive health. Available in a convenient berry-flavored powder format.',
     ingredients: [
       'Myo-inositol (4000 mg)',

@@ -14,7 +14,13 @@ interface ProductPageProps {
 
 export const ProductPage: React.FC<ProductPageProps> = ({ product, onAddToCart, onNavigate, onToggleWishlist, wishlist }) => {
     const [quantity, setQuantity] = useState(1);
+    const [selectedImageIndex, setSelectedImageIndex] = useState(0);
     const isInWishlist = wishlist.includes(product.id);
+    
+    // Get all images - use imageUrls array if available, otherwise fall back to single imageUrl
+    const images = product.imageUrls && product.imageUrls.length > 0 
+      ? product.imageUrls 
+      : [product.imageUrl];
 
     const handleQuantityChange = (amount: number) => {
         setQuantity(prev => Math.max(1, prev + amount));
@@ -33,22 +39,52 @@ export const ProductPage: React.FC<ProductPageProps> = ({ product, onAddToCart, 
         </button>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start">
-        <div className="aspect-square bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg overflow-hidden shadow-lg relative">
-          <img 
-            src={product.imageUrl} 
-            alt={product.name} 
-            className="w-full h-full object-cover" 
-            onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.style.display = 'none';
-            }}
-          />
-          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-200 hidden has-[:not([style*='display: none'])]:hidden">
-            <div className="text-center p-8">
-              <p className="text-blue-700 font-semibold text-2xl mb-2">{product.name}</p>
-              <p className="text-blue-500 text-sm">Please add product image</p>
+        <div>
+          {/* Main Image */}
+          <div className="aspect-square bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg overflow-hidden shadow-lg relative mb-4">
+            <img 
+              src={images[selectedImageIndex]} 
+              alt={`${product.name} - Image ${selectedImageIndex + 1}`} 
+              className="w-full h-full object-cover" 
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+              }}
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-200 hidden has-[:not([style*='display: none'])]:hidden">
+              <div className="text-center p-8">
+                <p className="text-blue-700 font-semibold text-2xl mb-2">{product.name}</p>
+                <p className="text-blue-500 text-sm">Please add product image</p>
+              </div>
             </div>
           </div>
+          
+          {/* Thumbnail Gallery */}
+          {images.length > 1 && (
+            <div className="flex gap-2 overflow-x-auto pb-2">
+              {images.map((imageUrl, index) => (
+                <button
+                  key={index}
+                  onClick={() => setSelectedImageIndex(index)}
+                  className={`flex-shrink-0 w-20 h-20 rounded-md overflow-hidden border-2 transition-all ${
+                    selectedImageIndex === index 
+                      ? 'border-blue-600 ring-2 ring-blue-200' 
+                      : 'border-gray-300 hover:border-gray-400'
+                  }`}
+                >
+                  <img 
+                    src={imageUrl} 
+                    alt={`${product.name} thumbnail ${index + 1}`}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                    }}
+                  />
+                </button>
+              ))}
+            </div>
+          )}
         </div>
         <div>
           <h1 className="text-4xl font-bold text-gray-900">{product.name}</h1>
@@ -57,7 +93,11 @@ export const ProductPage: React.FC<ProductPageProps> = ({ product, onAddToCart, 
           <p className="mt-6 text-base text-gray-700 leading-relaxed">{product.details}</p>
           
           <div className="mt-8">
-            <h3 className="font-semibold text-gray-900">Key Ingredients</h3>
+            <h3 className="font-semibold text-gray-900">
+              Key Ingredients
+              {product.id === 1 && <span className="ml-2 text-sm font-normal text-gray-600">(Serving per 3 tablet)</span>}
+              {product.id === 2 && <span className="ml-2 text-sm font-normal text-gray-600">(each sachet contains)</span>}
+            </h3>
             <ul className="mt-2 list-disc list-inside text-gray-600 space-y-1">
                 {product.ingredients.map((ing, index) => <li key={index}>{ing}</li>)}
             </ul>

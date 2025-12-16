@@ -4,6 +4,7 @@ export interface Product {
   tagline: string;
   price: number;
   imageUrl: string;
+  imageUrls?: string[]; // Optional array for multiple images
   details: string;
   ingredients: string[];
 }
