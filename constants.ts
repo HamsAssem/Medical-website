@@ -31,8 +31,8 @@ export const PRODUCTS: Product[] = [
     imageUrl: '/images/fertilmax-product.webp',
     imageUrls: [
       '/images/fertilmax-product.webp',
-      '/images/50835-pure-health-fertil-max-for-women-15-sachets-berry-flavor-left-side_1.jpg',
-      '/images/50835-pure-health-fertil-max-for-women-15-sachets-berry-flavor-right-side_1.jpg',
+      '/images/Untitled design (3).png',
+      '/images/Untitled design (4).png',
     ],
     details: 'Fertil Max by Jenasol is a complete formula designed to support female fertility and reproduction. This expertly formulated supplement helps manage and treat the symptoms of PCOS (Polycystic Ovary Syndrome). Each sachet contains a powerful combination of myo-inositol, D-chiro-inositol, and other essential nutrients that work synergistically to support hormonal balance, egg quality, and overall reproductive health. Available in a convenient berry-flavored powder format.',
     ingredients: [
