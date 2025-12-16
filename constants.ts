@@ -31,7 +31,8 @@ export const PRODUCTS: Product[] = [
     imageUrl: '/images/fertilmax-product.webp',
     imageUrls: [
       '/images/fertilmax-product.webp',
-      '/images/fertilmax-product-2.webp',
+      '/images/fertilmax-box-side.webp',
+      '/images/fertilmax-supplement-facts.webp',
     ],
     details: 'Fertil Max by Jenasol is a complete formula designed to support female fertility and reproduction. This expertly formulated supplement helps manage and treat the symptoms of PCOS (Polycystic Ovary Syndrome). Each sachet contains a powerful combination of myo-inositol, D-chiro-inositol, and other essential nutrients that work synergistically to support hormonal balance, egg quality, and overall reproductive health. Available in a convenient berry-flavored powder format.',
     ingredients: [
