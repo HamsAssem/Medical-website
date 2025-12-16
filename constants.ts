@@ -20,7 +20,13 @@ export const PRODUCTS: Product[] = [
       'Shilajit Satava (500 mg)',
       'Glutathione (80 mg)',
       'Kapikachhu (Mucuna pruriens) (400 mg)',
-      'Safed Musli Extract (350 mg)'
+      'Safed Musli Extract (350 mg)',
+      'Tulsi (6 mg)',
+      'Clove Powder (10 mg)',
+      'Nutmeg Oil Powder (10 mg)',
+      'Dalchini Powder (10 mg)',
+      'Mirch Powder (10 mg)',
+      'Kesar (10 mg)'
     ],
   },
   {
