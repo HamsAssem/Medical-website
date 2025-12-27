@@ -1,0 +1,17 @@
+URGENT: Add These 2 Image Files
+
+The code is ready, but you need to add the actual image files:
+
+1. Save the box side panel image as: fertilmax-box-side.webp
+2. Save the supplement facts label image as: fertilmax-supplement-facts.webp
+
+LOCATION: C:\Users\DELL\Desktop\hamosa-medical2\public\images\
+
+After saving the files:
+1. Open terminal in the project folder
+2. Run: git add public/images/fertilmax-box-side.webp public/images/fertilmax-supplement-facts.webp
+3. Run: git commit -m "Add Fertil Max product images"
+4. Run: git push origin main
+
+Vercel will automatically deploy!
+

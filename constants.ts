@@ -7,6 +7,11 @@ export const PRODUCTS: Product[] = [
     tagline: 'Complete Male Fertility Support',
     price: 49.99,
     imageUrl: '/images/spermaid-product.webp',
+    imageUrls: [
+      '/images/spermaid-product.webp',
+      '/images/Untitled design (13).png',
+      '/images/Untitled design (14).png',
+    ],
     details: 'Spermaid+ is a comprehensive dietary supplement designed to support male reproductive health. Formulated with scientifically-proven ingredients, it helps improve sperm count, motility, viscosity, and morphology. This advanced formula also boosts male libido and provides essential energy support. Each serving contains a powerful blend of vitamins, minerals, and herbal extracts specifically chosen for their role in male fertility and vitality.',
     ingredients: [
       'Vitamin E (120 mg - 800% DV)',
@@ -20,13 +25,7 @@ export const PRODUCTS: Product[] = [
       'Shilajit Satava (500 mg)',
       'Glutathione (80 mg)',
       'Kapikachhu (Mucuna pruriens) (400 mg)',
-      'Safed Musli Extract (350 mg)',
-      'Tulsi (6 mg)',
-      'Clove Powder (10 mg)',
-      'Nutmeg Oil Powder (10 mg)',
-      'Dalchini Powder (10 mg)',
-      'Mirch Powder (10 mg)',
-      'Kesar (10 mg)'
+      'Safed Musli Extract (350 mg)'
     ],
   },
   {
@@ -34,11 +33,11 @@ export const PRODUCTS: Product[] = [
     name: 'Fertil Max',
     tagline: 'Complete Female Fertility & PCOS Support',
     price: 54.99,
-    imageUrl: '/images/fertilmax-product.webp',
+    imageUrl: '/images/50835-PURE-HEALTH-FERTIL-MAX-FOR-WOMEN-15-SACHETS-BERRY-FLAVOR.webp',
     imageUrls: [
-      '/images/fertilmax-product.webp',
-      '/images/Untitled design (3).png',
-      '/images/Untitled design (4).png',
+      '/images/50835-PURE-HEALTH-FERTIL-MAX-FOR-WOMEN-15-SACHETS-BERRY-FLAVOR.webp',
+      '/images/fertilmax-box-side.webp',
+      '/images/fertilmax-supplement-facts.webp',
     ],
     details: 'Fertil Max by Jenasol is a complete formula designed to support female fertility and reproduction. This expertly formulated supplement helps manage and treat the symptoms of PCOS (Polycystic Ovary Syndrome). Each sachet contains a powerful combination of myo-inositol, D-chiro-inositol, and other essential nutrients that work synergistically to support hormonal balance, egg quality, and overall reproductive health. Available in a convenient berry-flavored powder format.',
     ingredients: [
